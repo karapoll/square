@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+
+<html>
+
+	<head>
+		<title>Square</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon_square_bold.png" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	</head>
+
+	<body>
+
+		<div id = "square" style = "background-color:red; width: 20rem; height:20rem; position: absolute;"></div>
+
+		<script>
+
+			setInterval(function()
+			{
+
+			var vert = Math.floor(Math.random() * 30);
+			var hor = Math.floor(Math.random() * 80);
+			var size = Math.floor(Math.random() * 70);
+
+			document.getElementById("square").style.left = vert + "rem";
+			document.getElementById("square").style.top = hor + "rem";
+			document.getElementById("square").style.height = size + "rem";
+			document.getElementById("square").style.width = size + "rem";
+			color();
+
+			},100);
+
+
+			function color()
+			{
+				var r = Math.floor(Math.random() * 255);
+				var g = Math.floor(Math.random() * 255);
+				var b = Math.floor(Math.random() * 255);
+				document.getElementById("square").style.background="rgb("+r+","+g+","+b+")";
+			}
+
+		</script>
+
+	</body>
+	
+</html>
